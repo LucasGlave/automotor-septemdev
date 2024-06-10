@@ -5,6 +5,7 @@ import Nosotros from './components/Nosotros';
 import Usados from './components/Usados';
 import Reseñas from './components/Reseñas';
 import Consultas from './components/Consultas';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Usados />
       <Reseñas />
       <Consultas />
+      <Footer />
     </div>
   );
 }
