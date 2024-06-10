@@ -21,8 +21,8 @@ const Nosotros = () => {
   }, [isOpen]);
 
   return (
-    <div className="min-h-screen flex flex-col text-center items-start justify-center pl-[5%] pb-[15%] z-10">
-      <div className="flex flex-col items-center justify-between p-12 w-1/2 h-3/4 rounded-xl z-10">
+    <div className="min-h-screen flex flex-col text-center xl:items-start items-center justify-center px-[5%] xl:pb-[15%] z-10">
+      <div className="flex flex-col items-center justify-between xl:p-12 xl:w-1/2 xl:h-3/4 rounded-xl z-10">
         <div className="flex flex-col items-center bg-[rgba(37,57,92,0.37)] backdrop-blur-md w-3/4 z-10 p-12 rounded-t-xl">
           <h2 className="text-white font-extrabold z-10 text-3xl font-roboto text-shadow-md">
             NOSOTROS
