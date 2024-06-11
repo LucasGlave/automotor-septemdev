@@ -13,9 +13,9 @@ function App() {
       <img src={imageBackground} alt="fondo" className="fixed w-screen h-screen object-cover z-0" />
       <Header />
       <Home />
-      <Nosotros />
-      <Usados />
       <Reseñas />
+      <Usados />
+      <Nosotros />
       <Consultas />
       <Footer />
     </div>
