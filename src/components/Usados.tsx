@@ -24,7 +24,7 @@ const Usados = () => {
           </div>
         </div>
 
-        <button className="border py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold">
+        <button className="border py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300">
           VER TODOS
         </button>
       </div>

@@ -11,10 +11,10 @@ const Home = () => {
         El lugar donde vas a encontrar a tu mejor compañero.
       </p>
       <div className="flex flex-row items-start gap-6 z-10">
-        <button className="border border-celeste py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-white text-celeste">
+        <button className="border border-celeste py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-white text-celeste hover:scale-105 transform duration-300">
           CONSULTA
         </button>
-        <button className="border py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-celeste">
+        <button className="border py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-celeste hover:scale-105 transform duration-300">
           USADOS
         </button>
       </div>
