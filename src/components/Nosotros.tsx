@@ -21,16 +21,16 @@ const Nosotros = () => {
   }, [isOpen]);
 
   return (
-    <div className="min-h-screen flex flex-col text-center items-start justify-center pl-[5%] pb-[15%] z-10">
-      <div className="flex flex-col items-center justify-between p-12 w-1/2 h-3/4 rounded-xl z-10">
-        <div className="flex flex-col items-center bg-[rgba(170,169,171,0.37)] backdrop-blur-md w-3/4 z-10 p-12 rounded-t-xl">
-          <h2 className="text-white font-extrabold z-10 text-3xl font-roboto text-shadow-md">
+    <div className="min-h-screen flex flex-col text-center xl:items-start md:items-start items-center justify-center px-[10%] z-10">
+      <div className="flex flex-col items-center justify-between xl:p-12 xl:w-[40%] md:w-[50%] lg:w-[60%] xl:h-3/4 rounded-xl z-10">
+        <div className="flex flex-col items-center bg-[rgba(37,57,92,0.37)] backdrop-blur-md w-3/4 z-10 xl:p-12 p-6 rounded-t-xl">
+          <h2 className="text-white font-extrabold z-10 xl:text-3xl font-roboto text-shadow-md">
             NOSOTROS
           </h2>
         </div>
         <img src={imgNosotros} alt="nosotros" className="z-10 rounded-xl shadow-2xl" />
         <div
-          className="relative flex flex-col items-center gap-7 bg-[rgba(170,169,171,0.37)] w-3/4 backdrop-blur-md z-10 p-6 rounded-b-xl"
+          className="relative flex flex-col items-center gap-7 bg-[rgba(37,57,92,0.37)] w-3/4 backdrop-blur-md z-10 xl:p-6 p-2 rounded-b-xl xl:text-base text-sm py-5"
           style={{ overflow: 'hidden' }}
         >
           <div ref={contentRef} style={{ height: 0, overflow: 'hidden' }}>
@@ -47,7 +47,7 @@ const Nosotros = () => {
           <button
             ref={buttonRef}
             onClick={handleOpen}
-            className="border py-[5px] flex items-center justify-center w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold"
+            className="border xl:py-[5px] py-[2px] flex items-center justify-center xl:w-32 w-24 rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300"
           >
             {isOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">

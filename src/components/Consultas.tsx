@@ -1,10 +1,10 @@
 const Consultas = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col text-start justify-center pl-[5%] pb-[15%] z-10">
-      <h1 className="text-white font-extrabold z-10 text-7xl font-roboto text-shadow-md">
+    <div className="w-full min-h-screen flex flex-col xl:text-start xl:items-start text-center justify-center items-center xl:pl-[5%] pb-[15%] z-10">
+      <h1 className="text-white font-extrabold z-10 xl:text-7xl text-[3rem] font-fugaz-one text-shadow-md">
         CONSULTAS
       </h1>
-      <h1 className="text-celeste font-extrabold z-10 text-7xl font-roboto text-shadow-md">
+      <h1 className="text-celeste font-extrabold z-10 xl:text-7xl text-[3rem] font-fugaz-one text-shadow-md">
         SEPTEMDEV
       </h1>
       <h2 className="text-white z-10 text-lg mb-3 text-shadow-md">

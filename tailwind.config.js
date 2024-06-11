@@ -15,7 +15,7 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         helvetica: ['Helvetica', 'Arial'],
         sfpro: ['SF Pro', 'Helvetica', 'Arial', 'sans-serif'],
-        "fugaz-one": ["Fugaz One", "sans-serif"],
+        fugaz_one: ["Fugaz One", "sans-serif"], 
       },
     },
   },
