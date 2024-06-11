@@ -9,7 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "celeste": "#2850f2"
+        "celeste": "#2850f2",
+        "logo": "#d6d2d1"
+      },
+      backgroundImage: {
+        "azul-image":
+          "linear-gradient(180deg, #3e62f2 0%, #2850f2 30%, #2850f2 70%, #203db3 100%)",
+        "gray-image":
+          "linear-gradient(180deg, #3f3f3f 0%, #181818 30%, #181818 70%, #373737 100%)",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
