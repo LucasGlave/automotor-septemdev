@@ -20,7 +20,7 @@ const Usado = ({ img, model, price }: usadoProps) => {
             </p>
             <p>${price}</p>
           </div>
-          <button className="text-white flex mt-2 items-center my-auto justify-center border p-[5px] w-16 text-sm rounded-xl backdrop-blur-lg shadow-lg font-semibold bg-celeste">
+          <button className="text-white flex mt-2 items-center my-auto justify-center border p-[5px] w-16 text-sm rounded-xl backdrop-blur-lg shadow-lg font-semibold bg-celeste hover:scale-105 transform duration-300">
             VER
           </button>
         </div>

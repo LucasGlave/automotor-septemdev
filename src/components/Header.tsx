@@ -40,24 +40,24 @@ const Header = () => {
   }, [isOpen]);
   return (
     <div className="w-full h-full absolute flex items-start justify-center z-10">
-      <div className="xl:flex hidden justify-between items-center mt-3 px-2 border rounded-full z-10 w-[70%] h-20 backdrop-blur-md bg-[#00000023]">
+      <div className="xl:flex hidden md:flex justify-between items-center mt-3 px-2 border rounded-full z-10 w-[60%] h-20 backdrop-blur-md bg-[#00000023]">
         <div className="w-16 h-16 rounded-full overflow-hidden">
           <img
             src={logo2}
             alt="logo-2"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover cursor-pointer"
           />
         </div>
-        <div className="flex flex-row gap-8 mr-10 font-semibold justify-center">
-          <h3>NOSOTROS</h3>
-          <h3>USADOS</h3>
-          <h3>NUEVOS</h3>
-          <h3>CONSULTA</h3>
+        <div className="flex flex-row gap-8 xl:mr-20 font-semibold justify-center xl:text-[1rem] md:text-sm md:mr-2">
+          <h3 className="cursor-pointer hover:scale-105 transform duration-300">NOSOTROS</h3>
+          <h3 className="cursor-pointer hover:scale-105 transform duration-300">USADOS</h3>
+          <h3 className="cursor-pointer hover:scale-105 transform duration-300">NUEVOS</h3>
+          <h3 className="cursor-pointer hover:scale-105 transform duration-300">CONSULTA</h3>
         </div>
       </div>
 
       <div
-        className="absolute xl:hidden top-0 p-2 flex overflow-hidden transition-all duration-75 ease-out items-start justify-between gap-7 bg-[#00000023]  backdrop-blur-md shadow-2xl z-[-10] w-[90%] mt-4 rounded-[2rem]"
+        className="absolute xl:hidden md:hidden top-0 p-2 flex overflow-hidden transition-all duration-75 ease-out items-start justify-between gap-7 bg-[#00000023]  backdrop-blur-md shadow-2xl z-[-10] w-[90%] mt-4 rounded-[2rem]"
         style={
           isOpen && !isBorder
             ? { borderRadius: "80px" }
@@ -82,7 +82,7 @@ const Header = () => {
             // spy={true}
             // smooth={true}
             // duration={700}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover"
           >
             NOSOTROS
           </p>
@@ -90,7 +90,7 @@ const Header = () => {
             // spy={true}
             // smooth={true}
             // duration={700}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover"
           >
             USADOS
           </p>
@@ -98,7 +98,7 @@ const Header = () => {
             // spy={true}
             // smooth={true}
             // duration={700}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover"
           >
             NUEVOS
           </p>
@@ -106,7 +106,7 @@ const Header = () => {
             // spy={true}
             // smooth={true}
             // duration={700}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
+            className="font-roboto hover:text-logoTypographyHover"
           >
             CONSULTA
           </p>
