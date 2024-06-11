@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import imgNosotros from '../assets/img-nosotros.jpg';
+import imgNosotros from '../../assets/img-nosotros.jpg';
 import gsap from 'gsap';
 
 const Nosotros = () => {

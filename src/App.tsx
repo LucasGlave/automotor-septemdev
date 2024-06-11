@@ -1,10 +1,10 @@
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import imageBackground from './assets/fondo-2.jpg';
 import Header from './components/Header';
-import Nosotros from './components/Nosotros';
-import Usados from './components/Usados';
-import Reseñas from './components/Reseñas';
-import Consultas from './components/Consultas';
+import Nosotros from './components/Nosotros/Nosotros';
+import Usados from './components/Vehiculos/Usados';
+import Reseñas from './components/Reseñas/Reseñas';
+import Consultas from './components/Consultas/Consultas';
 import Footer from './components/Footer';
 
 function App() {
