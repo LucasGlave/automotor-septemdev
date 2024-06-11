@@ -23,14 +23,14 @@ const Nosotros = () => {
   return (
     <div className="min-h-screen flex flex-col text-center items-start justify-center pl-[5%] pb-[15%] z-10">
       <div className="flex flex-col items-center justify-between p-12 w-1/2 h-3/4 rounded-xl z-10">
-        <div className="flex flex-col items-center bg-[rgba(37,57,92,0.37)] backdrop-blur-md w-3/4 z-10 p-12 rounded-t-xl">
+        <div className="flex flex-col items-center bg-[rgba(170,169,171,0.37)] backdrop-blur-md w-3/4 z-10 p-12 rounded-t-xl">
           <h2 className="text-white font-extrabold z-10 text-3xl font-roboto text-shadow-md">
             NOSOTROS
           </h2>
         </div>
         <img src={imgNosotros} alt="nosotros" className="z-10 rounded-xl shadow-2xl" />
         <div
-          className="relative flex flex-col items-center gap-7 bg-[rgba(37,57,92,0.37)] w-3/4 backdrop-blur-md z-10 p-6 rounded-b-xl"
+          className="relative flex flex-col items-center gap-7 bg-[rgba(170,169,171,0.37)] w-3/4 backdrop-blur-md z-10 p-6 rounded-b-xl"
           style={{ overflow: 'hidden' }}
         >
           <div ref={contentRef} style={{ height: 0, overflow: 'hidden' }}>

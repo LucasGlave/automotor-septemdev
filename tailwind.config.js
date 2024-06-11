@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const textShadowPlugin = require('tailwindcss-textshadow')
+// const textShadowPlugin = require('tailwindcss-textshadow')
 
 export default {
   content: [
@@ -9,16 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "celeste": "#047FD9"
+        "celeste": "#2850f2"
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         helvetica: ['Helvetica', 'Arial'],
         sfpro: ['SF Pro', 'Helvetica', 'Arial', 'sans-serif'],
+        "fugaz-one": ["Fugaz One", "sans-serif"],
       },
-      // textS: {
-      //   custom: '0 4px 9.2px 0 rgba(0, 0, 0, 0.25)',
-      // },
     },
   },
   plugins: [

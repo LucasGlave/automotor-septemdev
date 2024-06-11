@@ -1,6 +1,6 @@
 const Reseñas = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col text-start justify-center pl-[5%] pb-[15%] z-10">
+    <div className="w-full min-h-40 flex flex-col text-start justify-center pl-[5%] pb-[15%] z-10">
       <h1 className="text-white font-extrabold z-10 text-7xl font-roboto text-shadow-md">
         RESEÑAS
       </h1>
