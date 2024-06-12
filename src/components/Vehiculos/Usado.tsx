@@ -17,7 +17,7 @@ const Usado = ({ img, model, price, brand }: usadoProps) => {
           />
         </a>
 
-        <div className="bg-[#ffffffcd] rounded-b-lg p-4 xl:w-[85%] w-[85%] flex justify-between text-black">
+        <div className="bg-[#ffffffcd] rounded-b-lg p-4 xl:w-[85%] w-[85%] flex justify-between text-black z-10">
           <div>
             <p>
               <b>{brand} {model}</b>

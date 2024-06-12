@@ -48,7 +48,7 @@ const Header = () => {
       data-aos="fade-down"
     >
       <div
-        className={`flex relative xl:w-[60%] w-[80%] h-[3.5rem] ${
+        className={`flex relative xl:w-[60%] md:[60%] w-[80%] h-[3.5rem] ${
           !isBorder && isOpen && 'overflow-hidden'
         } rounded-full bg-black dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6`}
       >
@@ -60,7 +60,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="xl:flex hidden gap-10">
+        <div className="xl:flex md:flex hidden gap-10">
           <Link
             to="SERVICES"
             spy={true}
@@ -172,7 +172,7 @@ const Header = () => {
         <button
           ref={buttonRef}
           onClick={handleOpen}
-          className="xl:hidden flex items-center text-3xl"
+          className="xl:hidden md:hidden flex items-center text-3xl"
         >
           <IoIosMenu />
         </button>
