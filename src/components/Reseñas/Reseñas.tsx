@@ -1,6 +1,10 @@
-const Reseñas = () => {
+type ReseñasProps = {
+  id: string
+}
+
+const Reseñas = ({id}: ReseñasProps) => {
   return (
-    <div className="w-full min-h-40 flex flex-col xl:text-start xl:items-start text-center justify-center items-center xl:pl-[5%] pb-[15%] z-10">
+    <div className="w-full min-h-40 flex flex-col xl:text-start xl:items-start text-center justify-center items-center xl:pl-[5%] pb-[15%] z-10" id={id}>
       <h1 className="text-white font-extrabold z-10 xl:text-7xl text-[3rem] font-fugaz-one text-shadow-md">
         RESEÑAS
       </h1>

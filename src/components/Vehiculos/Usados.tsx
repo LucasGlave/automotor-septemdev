@@ -1,9 +1,13 @@
 import Usado from "./Usado";
 import { vehiculos } from "./dataVehiculos";
 
-const Usados = () => {
+type VehiculosProps = {
+  id: string
+}
+
+const Usados = ({id} : VehiculosProps) => {
   return (
-    <div className="w-full min-h-screen flex flex-col text-start justify-center z-10">
+    <div className="w-full min-h-screen flex flex-col text-start justify-center z-10" id={id}>
       <div className="flex flex-col gap-10 items-center justify-center w-full  h-full bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.68)] via-50% to-transparent  z-10">
         <h2 className="text-white font-extrabold z-10 text-3xl font-roboto text-shadow-md">
           VEHÍCULOS
