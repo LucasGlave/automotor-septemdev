@@ -1,6 +1,10 @@
-const Consultas = () => {
+type ConsultasProps = {
+  id: string
+}
+
+const Consultas = ({id}: ConsultasProps) => {
   return (
-    <div className="w-full min-h-screen flex flex-col xl:text-start xl:items-start text-center justify-center items-center xl:pl-[5%] pb-[15%] z-10">
+    <div className="w-full min-h-screen flex flex-col xl:text-start xl:items-start text-center justify-center items-center xl:pl-[5%] pb-[15%] z-10" id={id}>
       <h1 className="text-white font-extrabold z-10 xl:text-7xl text-[3rem] font-fugaz-one text-shadow-md">
         CONSULTAS
       </h1>

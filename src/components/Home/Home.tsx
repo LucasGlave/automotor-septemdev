@@ -1,3 +1,5 @@
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 const Home = () => {
   return (
     <div className="w-full min-h-screen gap-5 flex flex-col xl:text-start md:text-start text-center justify-center pl-[5%] pb-[15%] z-10">
@@ -13,12 +15,12 @@ const Home = () => {
         El lugar donde vas a encontrar a tu mejor compañero.
       </p>
       <div className="flex flex-row items-center xl:mr-auto md:mr-auto justify-center  gap-6 z-10">
-        <button className="py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300">
+        <Link to="VEHICULOS" smooth={true} duration={500} className="py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300 cursor-pointer">
           VEHÍCULOS
-        </button>
-        <button className=" bg-gray-image py-[5px] w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300">
+        </Link>
+        <Link to="CONSULTAS" smooth={true} duration={500} className=" bg-gray-image py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300 cursor-pointer">
           CONSULTA
-        </button>
+        </Link>
       </div>
     </div>
   );

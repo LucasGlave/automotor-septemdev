@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import imgNosotros from '../../assets/img-nosotros.jpg';
 import gsap from 'gsap';
 
-const Nosotros = () => {
+type NosotrosProps = {
+  id: string
+}
+
+const Nosotros = ({id}: NosotrosProps) => {
   const contentRef = useRef(null);
   const buttonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +25,7 @@ const Nosotros = () => {
   }, [isOpen]);
 
   return (
-    <div className="min-h-screen flex flex-col text-center xl:items-start md:items-start items-center justify-center px-[10%] z-10">
+    <div className="min-h-screen flex flex-col text-center xl:items-start md:items-start items-center justify-center px-[10%] z-10" id={id}>
       <div className="flex flex-col items-center justify-between xl:p-12 xl:w-[40%] md:w-[50%] lg:w-[60%] xl:h-3/4 rounded-xl z-10">
         <div className="flex flex-col items-center bg-[rgba(37,57,92,0.37)] backdrop-blur-md w-3/4 z-10 xl:p-12 p-6 rounded-t-xl">
           <h2 className="text-white font-extrabold z-10 xl:text-3xl font-roboto text-shadow-md">
