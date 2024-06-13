@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Vehiculos from "./components/Vehiculos/Vehiculos";
 import Inicio from "./components/Inicio";
+import Vehiculo from "./components/Vehiculos/Vehiculo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio id="INICIO" />} />
           <Route path="/vehiculos" element={<Vehiculos />} />
+          <Route path="/individual-vehiculo" element={<Vehiculo />} />
         </Routes>
         <Footer />
       </div>

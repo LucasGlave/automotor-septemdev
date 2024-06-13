@@ -1,6 +1,6 @@
 import logo2 from "../assets/logo-2.jpg";
 import { IoIosMenu } from "react-icons/io";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import AOS from "aos";
 import gsap from "gsap";
 import "aos/dist/aos.css";
