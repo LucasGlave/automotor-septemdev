@@ -1,18 +1,46 @@
 import { vehiculos } from "./dataVehiculos";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+
 const Vehiculo = () => {
   return (
-    <div className="w-full flex xl:flex-row md:flex-row flex-col items-center xl:justify-evenly md:justify-evenly">
+    <div className="bg-black w-full flex flex-col xl:flex-row md:flex-row items-center justify-evenly">
       {vehiculos.slice(0, 1).map((vehiculo, index) => (
-        <div key={index} className="flex flex-col xl:flex-row md:flex-row items-center xl:mt-32 mb-24 justify-around">
-          <div className="xl:w-[50%] flex items-center justify-center z-10">
-            <img src={vehiculo.img} className="flex m-auto shadow-2xl" alt={`${vehiculo.marca} ${vehiculo.modelo}`} />
+        <div
+          key={index}
+          className="z-10 flex flex-col xl:flex-row md:flex-row items-center mt-28 mb-28 gap-4 px-8 w-full relative justify-evenly"
+        >
+          <div className="xl:w-[30%] md:w-[30%] w-[90%] flex items-center justify-center z-10 relative">
+            <Swiper
+              spaceBetween={30}
+              effect={"fade"}
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[EffectFade, Navigation, Pagination]}
+              className="w-full flex items-center justify-center relative group rounded-xl"
+            >
+              {Array.isArray(vehiculo.img) &&
+                vehiculo.img.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Cruze image ${index + 1}`}
+                      className="flex w-full xl:h-[21rem] h-[10rem]  m-auto shadow-2xl items-center justify-center "
+                    />
+                  </SwiperSlide>
+                ))}
+            </Swiper>
           </div>
-          <div className="xl:w-[50%] md:w-[50%] w-[80%] flex flex-col gap-8 z-10 backdrop-blur-lg p-5 rounded-lg mr-8">
-            <b className="text-center text-xl">
+          <div className="xl:w-[60%] md:w-[60%] w-full flex flex-col gap-8 z-10 backdrop-blur-lg xl:p-5 md:p-5 py-2 px-3 rounded-lg xl:mx-8 relative">
+            <b className="text-center text-xl text-white">
               {vehiculo.marca} {vehiculo.modelo}
             </b>
-            <div className="text-start flex flex-col gap-5">
+            <div className="text-start flex flex-col gap-5 text-white">
               <p>
                 <b>Conectividad: </b>
                 {vehiculo.conectividad}
@@ -38,6 +66,5 @@ const Vehiculo = () => {
     </div>
   );
 };
-
 
 export default Vehiculo;
