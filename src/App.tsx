@@ -10,7 +10,7 @@ import Vehiculo from "./components/Vehiculos/Vehiculo";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen w-full font-roboto">
+      <div className="min-h-screen w-full font-roboto relative">
         <img
           src={imageBackground}
           alt="fondo"
@@ -29,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+
