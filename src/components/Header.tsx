@@ -57,7 +57,14 @@ const Header = () => {
         } rounded-full bg-black dark:bg-footer-dark z-10 mt-3 m-auto items-center justify-between shadow-xl xl:pr-24 pr-6`}
       >
         <div>
-          <Link to="INICIO" smooth={true} duration={500} onClick={() => {navigate("/")}}>
+          <Link
+            to="INICIO"
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img
               src={logo2}
               className="w-[100px] h-[3.5rem] rounded-full ml-0 z-20 cursor-pointer"
@@ -65,14 +72,14 @@ const Header = () => {
           </Link>
         </div>
         <div className="xl:flex md:flex hidden gap-10">
+          {" "}
           <Link
-            to="INICIO"
+            to="NOSOTROS"
             smooth={true}
             duration={500}
             className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-            onClick={() => {navigate("/")}}
           >
-            Inicio
+            Nosotros
           </Link>
           <Link
             to=""
@@ -91,20 +98,12 @@ const Header = () => {
             Camionetas
           </Link>
           <Link
-            to="NOSOTROS"
+            to="CONTACTO"
             smooth={true}
             duration={500}
             className="font-roboto hover:text-logoTypographyHover cursor-pointer"
           >
-            Nosotros
-          </Link>
-          <Link
-            to="CONSULTAS"
-            smooth={true}
-            duration={500}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-          >
-            Consulta
+            Contacto
           </Link>
         </div>
 
@@ -123,10 +122,10 @@ const Header = () => {
             className=" h-0 text-center mt-[3.5rem] flex flex-col gap-2 w-full overflow-hidden"
           >
             <Link
-              to="SERVICES"
+              to="CONSULT"
               className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
-              Inicio
+              Nosotros
             </Link>
             <Link
               to="ABOUT"
@@ -139,12 +138,6 @@ const Header = () => {
               className="font-roboto hover:text-logoTypographyHover cursor-pointer"
             >
               Camionetas
-            </Link>
-            <Link
-              to="CONSULT"
-              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-            >
-              Nosotros
             </Link>
             <Link
               to="TEAM"

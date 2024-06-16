@@ -12,14 +12,14 @@ const Home = () => {
         </h1>
       </div>
       <p className="text-white z-10 text-lg mb-2 text-shadow-md">
-        El lugar donde vas a encontrar a tu mejor compañero.
+      ¡Encontra el auto que estas buscando!
       </p>
       <div className="flex flex-row items-center xl:mr-auto md:mr-auto justify-center  gap-6 z-10">
         <Link to="VEHICULOS" smooth={true} duration={500} className="py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300 cursor-pointer">
-          VEHÍCULOS
+          Vehículos
         </Link>
-        <Link to="CONSULTAS" smooth={true} duration={500} className=" bg-gray-image py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300 cursor-pointer">
-          CONSULTA
+        <Link to="CONTACTO" smooth={true} duration={500} className=" bg-gray-image py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300 cursor-pointer">
+          Contacto
         </Link>
       </div>
     </div>
