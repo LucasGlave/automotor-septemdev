@@ -14,7 +14,9 @@ function Vehiculos() {
           {vehiculos.map((vehiculo, index) => (
             <Usado
               key={index}
-              img={vehiculo.img}
+              img={vehiculo.img[0]}
+              year={vehiculo.año}
+              km={vehiculo.km}
               brand={vehiculo.marca}
               model={vehiculo.modelo}
               price={vehiculo.precio}

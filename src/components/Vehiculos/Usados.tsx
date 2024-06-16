@@ -18,6 +18,8 @@ const Usados = ({id} : VehiculosProps) => {
               <Usado
                 key={index}
                 img={vehiculo.img[0]}
+                year={vehiculo.año}
+                km={vehiculo.km}
                 brand={vehiculo.marca}
                 model={vehiculo.modelo}
                 price={vehiculo.precio}
@@ -26,8 +28,8 @@ const Usados = ({id} : VehiculosProps) => {
           </div>
         </div>
         <a href="/vehiculos" target="e_blank">
-          <button className="border py-[5px] flex mx-auto mt-4  items-center justify-center w-32 rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300">
-            VER TODOS
+          <button className=" bg-gray-image py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold hover:scale-105 transform duration-300 cursor-pointer">
+            Ver todos
           </button>
         </a>
       </div>
