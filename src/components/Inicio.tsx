@@ -3,15 +3,61 @@ import Nosotros from "./Nosotros/Nosotros";
 import Usados from "./Vehiculos/Usados";
 import Reseñas from "./Reseñas/Reseñas";
 import Contacto from "./Contacto/Contacto";
+import camionetaPNG from "../assets/camioneta.png";
+import imageBackground from "../assets/fondo.png";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type InicioProps = {
   id: string;
 };
 
 function Inicio({ id }: InicioProps) {
+  const [showOverlayImage, setShowOverlayImage] = useState(false);
+  const [scrollEnabled, setScrollEnabled] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+
+    const handleScroll = (event: Event) => {
+      if (!scrollEnabled) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+        setShowOverlayImage(true);
+        setTimeout(() => {
+          setScrollEnabled(true);
+        }, 3000);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollEnabled]);
+
   return (
-    <div className="min-h-screen w-full font-roboto" id={id}>
+    <div className="min-h-screen w-full font-roboto scroll-smooth" id={id}>
+      <img
+        src={imageBackground}
+        alt="fondo"
+        className="fixed w-screen h-screen object-cover z-0"
+      />
+
+      {showOverlayImage && (
+        <img
+          src={camionetaPNG}
+          alt="overlay"
+          className="fixed w-screen h-screen object-cover z-10"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        />
+      )}
+     
       <Home />
+      
       <Usados id="VEHICULOS" />
       <Reseñas id="RESEÑAS" />
       <Nosotros id="NOSOTROS" />

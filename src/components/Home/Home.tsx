@@ -5,10 +5,10 @@ const Home = () => {
     <div className="w-full min-h-screen gap-5 flex flex-col xl:text-start md:text-start text-center justify-center pl-[5%] pb-[15%] z-10">
       <div className="xl:text-start md:text-start text-center z-10">
         <h1 className="text-white font-extrabold z-10 xl:text-7xl md:text-6xl text-5xl font-fugaz_one text-shadow-md">
-          AUTOMOTORES
+          CAR
         </h1>
         <h1 className="text-celeste font-extrabold z-10 xl:text-7xl md:text-6xl text-5xl font-roboto text-shadow-md xl:mt-[-15px] md:mt-[-10px]">
-          SEPTEMDEV
+          DREAMS
         </h1>
       </div>
       <p className="text-white z-10 text-lg mb-2 text-shadow-md">

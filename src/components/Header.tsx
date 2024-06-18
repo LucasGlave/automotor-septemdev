@@ -1,4 +1,5 @@
-import logo2 from "../assets/logo-2.jpg";
+// import logo2 from "../assets/logo-2.jpg";
+import logoCarDreams from "../assets/carDreamsLogo.png"
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-scroll";
 import AOS from "aos";
@@ -66,8 +67,8 @@ const Header = () => {
             }}
           >
             <img
-              src={logo2}
-              className="w-[100px] h-[3.5rem] rounded-full ml-0 z-20 cursor-pointer"
+              src={logoCarDreams}
+              className="w-[100px] h-[5rem] ml-0 z-20 cursor-pointer invert flex my-auto"
             />
           </Link>
         </div>
