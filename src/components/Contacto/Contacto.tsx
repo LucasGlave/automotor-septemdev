@@ -10,7 +10,7 @@ const Contacto = ({ id }: ConsultasProps) => {
       <h2 className="text-white text-center font-extrabold z-10 text-3xl font-roboto text-shadow-md">
         CONTACTO
       </h2>
-      <div className="flex xl:w-[80%] md:w-[80%] w-[90%] flex-col pb-16 pt-8 mx-auto bg-gradient-to-b from-white via-[rgba(255,255,255,0.68)] via-50% to-white z-10">
+      <div className="flex xl:w-[90%] md:w-[90%] w-[90%] h-[35rem] flex-col justify-center bg-gradient-to-b from-white via-[rgba(255,255,255,0.68)] via-50% to-white z-10 rounded-xl">
         <h2 className="text-black text-center font-roboto mb-5 xl:text-2xl md:text-2xl text-lg font-semibold">
           ¡No dudes en ponerte en contacto con nosotros!
         </h2>
@@ -22,15 +22,15 @@ const Contacto = ({ id }: ConsultasProps) => {
           <form className="xl:w-[50%] md:w-[50%] w-full flex flex-col gap-4 items-center justify-center">
             <input
               placeholder="Nombre"
-              className="xl:w-[70%] md:w[70%] w-[75%] p-2 border border-black text-black"
+              className="xl:w-[70%] md:w[70%] w-[75%] p-2 border border-black text-black outline-none"
             />
             <input
               placeholder="Email"
-              className="xl:w-[70%] md:w-[70%] w-[75%] p-2 border border-black text-black"
+              className="xl:w-[70%] md:w-[70%] w-[75%] p-2 border border-black text-black outline-none"
             />
             <textarea
               placeholder="Consulta"
-              className="xl:w-[70%] md:w-[70%] w-[75%] min-h-[7rem] p-2 border border-black text-black"
+              className="xl:w-[70%] md:w-[70%] w-[75%] min-h-[7rem] p-2 border border-black text-black outline-none"
             />
             <button className="py-[5px] w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300 cursor-pointer">
               Enviar

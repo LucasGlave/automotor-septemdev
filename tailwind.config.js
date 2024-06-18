@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: ['smooth'],
       colors: {
         "celeste": "#2850f2",
         "logo": "#d6d2d1"
