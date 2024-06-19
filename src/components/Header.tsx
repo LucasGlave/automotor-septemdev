@@ -1,5 +1,5 @@
 // import logo2 from "../assets/logo-2.jpg";
-import logoCarDreams from "../assets/carDreamsLogo.png"
+import logoCarDreams from "../assets/carDreamsLogo.png";
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-scroll";
 import AOS from "aos";
@@ -9,8 +9,21 @@ import { useEffect, useRef, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import {
+  MdKeyboardArrowDown,
+  MdKeyboardArrowUp,
+  MdKeyboardArrowRight,
+  MdKeyboardArrowLeft,
+} from "react-icons/md";
+
 const Header = () => {
   const navigate = useNavigate();
+
+  const [isAutosOpen, setIsAutosOpen] = useState(false);
+  const [isCamionetasOpen, setIsCamionetasOpen] = useState(false);
+
+  const toggleAutosMenu = () => setIsAutosOpen(!isAutosOpen);
+  const toggleCamionetasMenu = () => setIsCamionetasOpen(!isCamionetasOpen);
 
   useEffect(() => {
     AOS.init({ duration: 1600 });
@@ -73,7 +86,6 @@ const Header = () => {
           </Link>
         </div>
         <div className="xl:flex md:flex hidden gap-10">
-          {" "}
           <Link
             to="NOSOTROS"
             smooth={true}
@@ -82,22 +94,54 @@ const Header = () => {
           >
             Nosotros
           </Link>
-          <Link
-            to=""
-            smooth={true}
-            duration={500}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-          >
-            Autos
-          </Link>
-          <Link
-            to=""
-            smooth={true}
-            duration={500}
-            className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-          >
-            Camionetas
-          </Link>
+          <div className="relative dropdown">
+            <div
+              onClick={toggleAutosMenu}
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer flex items-center"
+            >
+              Autos{" "}
+              {isAutosOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+            </div>
+            {isAutosOpen && (
+              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg">
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Todos
+                </Link>
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Nuevos
+                </Link>
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Usados
+                </Link>
+              </div>
+            )}
+          </div>
+          <div className="relative dropdown">
+            <div
+              onClick={toggleCamionetasMenu}
+              className="font-roboto hover:text-logoTypographyHover cursor-pointer flex items-center"
+            >
+              Camionetas{" "}
+              {isCamionetasOpen ? (
+                <MdKeyboardArrowUp />
+              ) : (
+                <MdKeyboardArrowDown />
+              )}
+            </div>
+            {isCamionetasOpen && (
+              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg">
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Todas
+                </Link>
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Nuevas
+                </Link>
+                <Link to="" className="px-4 py-2 cursor-pointer">
+                  Usadas
+                </Link>
+              </div>
+            )}
+          </div>
           <Link
             to="CONTACTO"
             smooth={true}
@@ -128,18 +172,58 @@ const Header = () => {
             >
               Nosotros
             </Link>
-            <Link
-              to="ABOUT"
-              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-            >
-              Autos
-            </Link>
-            <Link
-              to="CLIENTS"
-              className="font-roboto hover:text-logoTypographyHover cursor-pointer"
-            >
-              Camionetas
-            </Link>
+            <div className="relative dropdown">
+              <div
+                onClick={toggleAutosMenu}
+                className="font-roboto hover:text-logoTypographyHover cursor-pointer flex items-center justify-center m-auto"
+              >
+                Autos{" "}
+                {isAutosOpen ? (
+                  <MdKeyboardArrowLeft />
+                ) : (
+                  <MdKeyboardArrowRight />
+                )}
+              </div>
+              {isAutosOpen && (
+                <div className="absolute flex flex-col top-full right-8 mt-[-2rem] text-white bg-black rounded shadow-lg z-20">
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Todos
+                  </Link>
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Nuevos
+                  </Link>
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Usados
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div className="relative dropdown">
+              <div
+                onClick={toggleCamionetasMenu}
+                className="font-roboto hover:text-logoTypographyHover cursor-pointer flex items-center justify-center m-auto"
+              >
+                Camionetas{" "}
+                {isCamionetasOpen ? (
+                  <MdKeyboardArrowLeft />
+                ) : (
+                  <MdKeyboardArrowRight />
+                )}
+              </div>
+              {isCamionetasOpen && (
+                <div className="absolute flex flex-col top-full right-8 mt-[-2rem] text-white bg-black rounded shadow-lg">
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Todas
+                  </Link>
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Nuevas
+                  </Link>
+                  <Link to="" className="px-4 py-2 cursor-pointer">
+                    Usadas
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               to="TEAM"
               className="font-roboto hover:text-logoTypographyHover cursor-pointer"

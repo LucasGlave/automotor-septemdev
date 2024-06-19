@@ -5,6 +5,7 @@ import Reseñas from "./Reseñas/Reseñas";
 import Contacto from "./Contacto/Contacto";
 import camionetaPNG from "../assets/camioneta.png";
 import imageBackground from "../assets/fondo.png";
+import mobileBackground from "../assets/fondo-2.jpg"
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -43,14 +44,19 @@ function Inicio({ id }: InicioProps) {
       <img
         src={imageBackground}
         alt="fondo"
-        className="fixed w-screen h-screen object-cover z-0"
+        className="xl:fixed xl:flex w-screen h-screen object-cover z-0 hidden"
+      />
+      <img
+        src={mobileBackground}
+        alt="fondo"
+        className="xl:hidden w-screen h-screen object-cover z-0 fixed"
       />
 
       {showOverlayImage && (
         <img
           src={camionetaPNG}
           alt="overlay"
-          className="fixed w-screen h-screen object-cover z-10"
+          className="xl:fixed xl:flex w-screen h-screen object-cover z-10 hidden"
           data-aos="fade-left"
           data-aos-duration="2000"
         />

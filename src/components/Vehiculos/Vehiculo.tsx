@@ -18,7 +18,7 @@ const Vehiculo = () => {
     AOS.init();
   }, []);
   return (
-    <div className="w-full min-h-screen flex flex-col xl:flex-row md:flex-row items-center justify-evenly">
+    <div className="w-full min-h-screen flex flex-col xl:flex-row md:flex-row items-center">
        <img
           src={imageBackground}
           alt="fondo"
@@ -27,9 +27,9 @@ const Vehiculo = () => {
       {vehiculos.slice(0, 1).map((vehiculo, index) => (
         <div
           key={index}
-          className="z-10 flex flex-col xl:flex-row md:flex-row items-center mt-8 mb-8 gap-4 px-8 w-full relative justify-evenly "
+          className="z-10 flex flex-col xl:flex-row md:flex-col items-center mt-24 mb-8 gap-4 px-8 w-full relative"
         >
-          <div className="xl:w-[33%] md:w-[40%] w-[90%] flex items-center justify-center z-10 relative" data-aos="fade" data-aos-duration="1900" data-aos-delay="300">
+          <div className="xl:w-[33%] md:w-[70%] w-[90%] flex items-center justify-center z-10 relative m-auto" data-aos="fade" data-aos-duration="1900" data-aos-delay="300">
             <Swiper
               spaceBetween={30}
               effect={"fade"}
@@ -44,14 +44,14 @@ const Vehiculo = () => {
                     <img
                       src={image}
                       alt={`Cruze image ${index + 1}`}
-                      className="flex w-full xl:h-[21rem] h-[10rem]  m-auto shadow-2xl items-center justify-center "
+                      className="flex w-full xl:h-[21rem] h-[10rem] md:h-[15rem]  m-auto shadow-2xl items-center justify-center "
                     />
                   </SwiperSlide>
                 ))}
             </Swiper>
           </div>
           <div className="flex flex-col gap-4" data-aos="fade" data-aos-duration="1900" data-aos-delay="300">
-            <div className="xl:w-[95%] md:w-[95%] w-full flex flex-col xl:gap-4 md:gap-4 gap-2 z-10 backdrop-blur-lg xl:p-5 md:p-5 py-2 px-3 rounded-lg xl:mx-8 relative">
+            <div className="xl:w-[95%] md:w-[95%] w-full flex flex-col xl:gap-4 md:gap-4 gap-2 z-10 backdrop-blur-lg xl:p-5 md:p-5 py-2 px-3 rounded-lg xl:mx-8 relative m-auto">
               <b className="text-center xl:text-2xl md:text-2xl text-xl text-white" data-aos="fade" data-aos-duration="1700" data-aos-delay="400">
                 {vehiculo.marca} {vehiculo.modelo}
               </b>

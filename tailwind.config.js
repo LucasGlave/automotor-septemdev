@@ -11,7 +11,8 @@ export default {
       scrollBehavior: ['smooth'],
       colors: {
         "celeste": "#2850f2",
-        "logo": "#d6d2d1"
+        "logo": "#d6d2d1",
+        "gris": "#A7A7A9"
       },
       backgroundImage: {
         "azul-image":

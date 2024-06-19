@@ -7,9 +7,9 @@ type ConsultasProps = {
 const Contacto = ({ id }: ConsultasProps) => {
   return (
     <div className="z-20 w-full min-h-screen flex flex-col items-center justify-center gap-5 bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.68)] via-50% to-transparent" id={id}>
-      <h2 className="text-white text-center font-extrabold z-10 text-3xl font-roboto text-shadow-md">
+      {/* <h2 className="text-white text-center font-extrabold z-10 text-3xl font-roboto text-shadow-md">
         CONTACTO
-      </h2>
+      </h2> */}
       <div className="flex xl:w-[90%] md:w-[90%] w-[90%] h-[35rem] flex-col justify-center bg-gradient-to-b from-white via-[rgba(255,255,255,0.68)] via-50% to-white z-10 rounded-xl">
         <h2 className="text-black text-center font-roboto mb-5 xl:text-2xl md:text-2xl text-lg font-semibold">
           ¡No dudes en ponerte en contacto con nosotros!
