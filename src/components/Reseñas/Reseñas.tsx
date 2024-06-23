@@ -32,7 +32,7 @@ const Reseñas = ({ id }: ReseñasProps) => {
 
       
       <div className="flex justify-center items-center w-full">
-        <div className="xl:w-[85%] md:w-[90%]  flex gap-6 justify-center m-auto xl:flex-row md:flex-row flex-col">
+        <div className="xl:w-[85%] md:w-[90%]  flex gap-6 justify-center m-auto xl:flex-row lg:flex-row md:flex-col flex-col">
           {reseñas.slice(0, 3).map((client, index) => (
             <Reseña
               key={index}

@@ -28,7 +28,7 @@ function Inicio({ id }: InicioProps) {
         setShowOverlayImage(true);
         setTimeout(() => {
           setScrollEnabled(true);
-        }, 3000);
+        }, 2000);
       }
     };
 

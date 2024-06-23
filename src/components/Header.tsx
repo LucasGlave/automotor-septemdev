@@ -85,6 +85,13 @@ const Header = () => {
             />
           </Link>
         </div>
+
+        <input
+          type="search"
+          placeholder="Buscar"
+          className="bg-transparent border border-white rounded-xl p-1 pl-2 xl:w-[35%] md:w-[25%] outline-none"
+        />
+
         <div className="xl:flex md:flex hidden gap-10">
           <Link
             to="NOSOTROS"
