@@ -26,7 +26,7 @@ function Reseña({ name, img, opinion, rating }: ReseñaProps) {
 
   return (
     <div className="flex justify-center h-full">
-      <div className="rounded-xl m-auto flex items-center flex-col justify-center bg-white p-5 gap-4 z-10 hover:scale-105 transform duration-300 shadow-xl">
+      <div className="rounded-xl m-auto md:w-[60%] lg:w-full w-[90%] xl:w-full flex items-center flex-col justify-center bg-white p-5 gap-4 z-10 hover:scale-105 transform duration-300 shadow-xl">
         <img
           src={img}
           alt="cliente"
