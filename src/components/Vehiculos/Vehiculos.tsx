@@ -5,6 +5,7 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Vehiculos() {
   useEffect(() => {
@@ -14,6 +15,8 @@ function Vehiculos() {
   const handleBackButtonClick = () => {
     window.history.back();
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="w-full min-h-screen flex flex-col z-10 mb-28">
@@ -41,13 +44,16 @@ function Vehiculos() {
         >
           <div className="w-[90%] flex m-auto">
             <button
-            onClick={handleBackButtonClick}
-            className="flex bg-transparent text-white z-10 text-xl gap-1 items-center "
-          >
-            <IoArrowBackCircleOutline /> volver
-          </button>
+              onClick={handleBackButtonClick}
+              className="flex bg-transparent text-white z-10 text-xl gap-1 items-center "
+              data-aos="fade"
+              data-aos-duration="2000"
+              data-aos-delay="300"
+            >
+              <IoArrowBackCircleOutline /> volver
+            </button>
           </div>
-          
+
           <div className="flex flex-wrap justify-center w-full gap-8">
             {vehiculos.map((vehiculo, index) => (
               <Usado
@@ -58,6 +64,7 @@ function Vehiculos() {
                 brand={vehiculo.marca}
                 model={vehiculo.modelo}
                 price={vehiculo.precio}
+                onClick={() => navigate(`/individual-vehiculo/${vehiculo.id}`)}
               />
             ))}
           </div>

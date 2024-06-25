@@ -60,6 +60,7 @@ const Header = () => {
       ease: "power3.inOut",
     });
   }, [isOpen]);
+  
   return (
     <div
       className="w-screen h-auto xl:fixed absolute flex items-start text-white justify-center z-50"
@@ -89,7 +90,7 @@ const Header = () => {
         <input
           type="search"
           placeholder="Buscar"
-          className="bg-transparent border border-white rounded-xl p-1 pl-2 xl:w-[35%] md:w-[25%] outline-none"
+          className="bg-transparent border border-white rounded-xl p-1 pl-2 xl:w-[35%] md:w-[25%] mr-3 outline-none"
         />
 
         <div className="xl:flex md:flex hidden gap-10">
@@ -110,16 +111,16 @@ const Header = () => {
               {isAutosOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </div>
             {isAutosOpen && (
-              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg">
-                <Link to="" className="px-4 py-2 cursor-pointer">
+              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg items-start">
+                <a
+                  href="/vehiculos"
+                  className="px-4 py-2 cursor-pointer"
+                  target="e_blank"
+                >
                   Todos
-                </Link>
-                <Link to="" className="px-4 py-2 cursor-pointer">
-                  Nuevos
-                </Link>
-                <Link to="" className="px-4 py-2 cursor-pointer">
-                  Usados
-                </Link>
+                </a>
+                <a className="px-4 py-2 cursor-pointer" target="e_blank">Nuevos</a>
+                <a className="px-4 py-2 cursor-pointer" target="e_blank">Usados</a>
               </div>
             )}
           </div>
@@ -136,16 +137,16 @@ const Header = () => {
               )}
             </div>
             {isCamionetasOpen && (
-              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg">
-                <Link to="" className="px-4 py-2 cursor-pointer">
+              <div className="absolute flex flex-col top-full left-0 mt-1 text-white bg-black rounded shadow-lg items-start">
+                <a
+                  href="/vehiculos"
+                  className="px-4 py-2 cursor-pointer"
+                  target="e_blank"
+                >
                   Todas
-                </Link>
-                <Link to="" className="px-4 py-2 cursor-pointer">
-                  Nuevas
-                </Link>
-                <Link to="" className="px-4 py-2 cursor-pointer">
-                  Usadas
-                </Link>
+                </a>
+                <a className="px-4 py-2 cursor-pointer" target="e_blank">Nuevas</a>
+                <a className="px-4 py-2 cursor-pointer" target="e_blank">Usadas</a>
               </div>
             )}
           </div>
@@ -193,15 +194,15 @@ const Header = () => {
               </div>
               {isAutosOpen && (
                 <div className="absolute flex flex-col top-full right-8 mt-[-2rem] text-white bg-black rounded shadow-lg z-20">
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Todos
-                  </Link>
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  </a>
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Nuevos
-                  </Link>
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  </a>
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Usados
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>
@@ -219,15 +220,15 @@ const Header = () => {
               </div>
               {isCamionetasOpen && (
                 <div className="absolute flex flex-col top-full right-8 mt-[-2rem] text-white bg-black rounded shadow-lg">
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Todas
-                  </Link>
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  </a>
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Nuevas
-                  </Link>
-                  <Link to="" className="px-4 py-2 cursor-pointer">
+                  </a>
+                  <a href="/vehiculos" className="px-4 py-2 cursor-pointer">
                     Usadas
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>

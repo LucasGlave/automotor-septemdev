@@ -42,7 +42,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex text-center">
+      <div className="flex text-center xl:mx-0 md:mx-0 mx-2">
         <p className="font-roboto">
           Copyright © SeptemDev Studio |{" "}
           <a target="e_blank" className="  cursor-pointer hover:underline hover:text-celeste">
