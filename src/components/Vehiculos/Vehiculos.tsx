@@ -1,7 +1,7 @@
 import { vehiculos } from "./dataVehiculos";
 import Usado from "./Usado";
 import imageBackground from "../../assets/fondo-2.jpg";
-import { IoArrowBackCircleOutline } from "react-icons/io5";
+// import { IoArrowBackCircleOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -34,39 +34,56 @@ function Vehiculos() {
         >
           VEHÍCULOS
         </h2>{" "}
-      </div>
-      <div className="flex justify-center items-center w-full">
-        <div
-          className="w-[80%] flex flex-col items-start gap-8 text-start"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-delay="300"
-        >
-          <div className="w-[90%] flex m-auto">
-            <button
-              onClick={handleBackButtonClick}
-              className="flex bg-transparent text-white z-10 text-xl gap-1 items-center "
-              data-aos="fade"
-              data-aos-duration="2000"
-              data-aos-delay="300"
-            >
-              <IoArrowBackCircleOutline /> volver
-            </button>
-          </div>
+        <div className="flex justify-center items-center w-full">
+          <div
+            className="w-[80%] flex flex-col items-start gap-8 text-start"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="300"
+          >
+            <div className="w-[95%] flex m-auto" >
+              <button
+                type="button"
+                className="bg-white text-center w-28 rounded-2xl h-8 relative font-sans text-black text-xl font-semibold group"
+                onClick={handleBackButtonClick}
+              >
+                <div className="bg-azul-image rounded-xl h-6 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[104px] z-10 duration-500">
+                  <svg
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 1024 1024"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="#000000"
+                      d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                    ></path>
+                    <path
+                      fill="#000000"
+                      d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                    ></path>
+                  </svg>
+                </div>
+                <p className="translate-x-2 text-sm">Volver</p>
+              </button>
+            </div>
 
-          <div className="flex flex-wrap justify-center w-full gap-8">
-            {vehiculos.map((vehiculo, index) => (
-              <Usado
-                key={index}
-                img={vehiculo.img[0]}
-                year={vehiculo.año}
-                km={vehiculo.km}
-                brand={vehiculo.marca}
-                model={vehiculo.modelo}
-                price={vehiculo.precio}
-                onClick={() => navigate(`/individual-vehiculo/${vehiculo.id}`)}
-              />
-            ))}
+            <div className="flex flex-wrap justify-center w-full gap-8">
+              {vehiculos.map((vehiculo, index) => (
+                <Usado
+                  key={index}
+                  img={vehiculo.img[0]}
+                  year={vehiculo.año}
+                  km={vehiculo.km}
+                  brand={vehiculo.marca}
+                  model={vehiculo.modelo}
+                  price={vehiculo.precio}
+                  onClick={() =>
+                    navigate(`/individual-vehiculo/${vehiculo.id}`)
+                  }
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

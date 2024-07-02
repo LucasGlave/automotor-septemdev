@@ -6,22 +6,14 @@ import logo from "../assets/carDreamsLogo.png"
 function Footer() {
   return (
     <div className="flex flex-col items-center justify-start w-screen pb-6  bg-gradient-to-b from-transparent to-white z-20 absolute text-black">
-      {/* <div className="flex flex-col text-center justify-start">
-        <h1 className="text-white font-extrabold z-10  text-[2rem] font-fugaz_one text-shadow-md">
-          AUTOMOTORES
-        </h1>
-        <h1 className="text-celeste font-extrabold z-10  text-[2rem] font-fugaz_one text-shadow-md">
-          SEPTEMDEV
-        </h1>
-      </div> */}
-      {/* <img src={logo} className="w-[12rem]"/> */}
+
       <div className="flex flex-col xl:gap-5 md:gap-5 gap-2 items-center justify-start w-screen">
-        <div className="flex flex-row xl:gap-20 md:gap-20 gap-3 justify-center items-center mx-2">
+        {/* <div className="flex flex-row xl:gap-20 md:gap-20 gap-3 justify-center items-center mx-2">
           <h3 className="cursor-pointer">NOSOTROS</h3>
           <h3 className="cursor-pointer">AUTOS</h3>
           <h3 className="cursor-pointer">CAMIONETAS</h3>
           <h3 className="cursor-pointer">CONTACTO</h3>
-        </div>
+        </div> */}
 
       <div className="flex gap-12 items-center xl:justify-evenly md:justify-evenly xl:w-[30%] md:w-[30%] mx-auto">
         <div className="flex text-2xl gap-5">

@@ -14,7 +14,7 @@ function Title({ title, comment, className }: TitleProps) {
   }, []);
   return (
     <div
-      className={`relative flex justify-center xl:pb-0 ${className}`}
+      className={`relative flex items-center justify-center xl:pb-0 ${className}`}
       data-aos="fade"
       data-aos-duration="1600"
     >
