@@ -12,16 +12,16 @@ import {
   FaCarAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import { IoArrowBackCircleOutline } from "react-icons/io5";
+// import { IoArrowBackCircleOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Vehiculo = () => {
   const { id } = useParams<{ id: string }>();
   const vehicleId = Number(id);
-  
+
   const vehiculo = vehiculos[vehicleId];
 
   if (!vehiculo) {
@@ -34,13 +34,14 @@ const Vehiculo = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center">
-      <img
-        src={imageBackground}
-        alt="fondo"
-        className="fixed w-screen h-full object-cover z-0"
-      />
-      <div className="w-[80%] flex flex-col items-start">
-        <button
+      <div className="flex flex-col gap-10 items-center justify-center w-full h-full bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.68)] via-50% to-transparent z-10">
+        <img
+          src={imageBackground}
+          alt="fondo"
+          className="fixed w-screen h-full object-cover z-0"
+        />
+        <div className="w-[80%] flex flex-col items-start">
+          {/* <button
           onClick={() => window.history.back()}
           className="flex bg-transparent text-white z-10 text-xl gap-1 items-center mb-5"
           data-aos="fade"
@@ -48,124 +49,152 @@ const Vehiculo = () => {
           data-aos-delay="300"
         >
           <IoArrowBackCircleOutline /> volver
-        </button>
-        <div className="z-10 flex flex-col xl:flex-row md:flex-col items-center mt-8 mb-8 gap-4 w-full relative xl:justify-evenly">
-          <div
-            className="xl:w-[38%] md:w-[70%] w-[90%] flex items-center justify-center z-10 relative m-auto"
+        </button> */}
+          <button
+            type="button"
+            className="bg-white text-center w-28 rounded-2xl h-8 relative font-sans text-black text-xl font-semibold group"
+            onClick={() => window.history.back()}
             data-aos="fade"
             data-aos-duration="1900"
             data-aos-delay="300"
           >
-            <Swiper
-              spaceBetween={30}
-              effect={"fade"}
-              navigation={true}
-              pagination={{ clickable: true }}
-              modules={[EffectFade, Navigation, Pagination]}
-              className="w-full flex items-center justify-center relative group rounded-xl"
-            >
-              {Array.isArray(vehiculo.img) &&
-                vehiculo.img.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={image}
-                      alt={`Cruze image ${index + 1}`}
-                      className="flex w-full xl:h-[21rem] h-[10rem] md:h-[15rem] m-auto shadow-2xl items-center justify-center"
-                    />
-                  </SwiperSlide>
-                ))}
-            </Swiper>
-          </div>
-          <div
-            className="flex flex-col gap-4 xl:w-[75%]"
-            data-aos="fade"
-            data-aos-duration="1900"
-            data-aos-delay="300"
-          >
-            <div className="xl:w-[95%] md:w-[95%] w-full flex flex-col xl:gap-4 md:gap-4 gap-2 z-10 backdrop-blur-lg xl:p-5 md:p-5 py-2 px-3 rounded-lg xl:mx-8 relative m-auto">
-              <b
-                className="text-center xl:text-2xl md:text-2xl text-xl text-white"
-                data-aos="fade"
-                data-aos-duration="1700"
-                data-aos-delay="400"
+            <div className="bg-azul-image rounded-xl h-6 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[104px] z-10 duration-500">
+              <svg
+                width="16px"
+                height="16px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                {vehiculo.marca} {vehiculo.modelo}
-              </b>
-              <div className="flex flex-col justify-center gap-2 items-center">
-                <p
-                  className="xl:text-xl md:text-xl text-lg font-bold"
+                <path
+                  fill="#000000"
+                  d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                ></path>
+                <path
+                  fill="#000000"
+                  d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                ></path>
+              </svg>
+            </div>
+            <p className="translate-x-2 text-sm">Volver</p>
+          </button>
+          <div className="z-10 flex flex-col xl:flex-row md:flex-col items-center mt-8 mb-8 gap-4 w-full relative xl:justify-evenly">
+            <div
+              className="xl:w-[38%] md:w-[70%] w-[90%] flex items-center justify-center z-10 relative m-auto"
+              data-aos="fade"
+              data-aos-duration="1900"
+              data-aos-delay="300"
+            >
+              <Swiper
+                spaceBetween={30}
+                effect={"fade"}
+                navigation={true}
+                pagination={{ clickable: true }}
+                modules={[EffectFade, Navigation, Pagination]}
+                className="w-full flex items-center justify-center relative group rounded-xl"
+              >
+                {Array.isArray(vehiculo.img) &&
+                  vehiculo.img.map((image, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={image}
+                        alt={`Cruze image ${index + 1}`}
+                        className="flex w-full xl:h-[21rem] h-[10rem] md:h-[15rem] m-auto shadow-2xl items-center justify-center"
+                      />
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+            </div>
+            <div
+              className="flex flex-col gap-4 xl:w-[75%]"
+              data-aos="fade"
+              data-aos-duration="1900"
+              data-aos-delay="300"
+            >
+              <div className="xl:w-[95%] md:w-[95%] w-full flex flex-col xl:gap-4 md:gap-4 gap-2 z-10 backdrop-blur-lg xl:p-5 md:p-5 py-2 px-3 rounded-lg xl:mx-8 relative m-auto">
+                <b
+                  className="text-center xl:text-2xl md:text-2xl text-xl text-white"
                   data-aos="fade"
                   data-aos-duration="1700"
-                  data-aos-delay="600"
+                  data-aos-delay="400"
                 >
-                  ${vehiculo.precio}
-                </p>
-                <div
-                  className="flex xl:gap-12 md:gap-12 gap-8"
-                  data-aos="fade"
-                  data-aos-duration="1700"
-                  data-aos-delay="800"
-                >
-                  <p className="flex justify-center items-center">
-                    <FaCalendarAlt className="mr-1" />
-                    {vehiculo.año}
+                  {vehiculo.marca} {vehiculo.modelo}
+                </b>
+                <div className="flex flex-col justify-center gap-2 items-center">
+                  <p
+                    className="xl:text-xl md:text-xl text-lg font-bold"
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="600"
+                  >
+                    ${vehiculo.precio}
                   </p>
-                  <p className="flex justify-center items-center">
-                    <FaTachometerAlt className="ml-1 mr-1 mb-[0.1rem]" />{" "}
-                    {vehiculo.km}km
+                  <div
+                    className="flex xl:gap-12 md:gap-12 gap-8"
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="800"
+                  >
+                    <p className="flex justify-center items-center">
+                      <FaCalendarAlt className="mr-1" />
+                      {vehiculo.año}
+                    </p>
+                    <p className="flex justify-center items-center">
+                      <FaTachometerAlt className="ml-1 mr-1 mb-[0.1rem]" />{" "}
+                      {vehiculo.km}km
+                    </p>
+                    <p className="flex justify-center items-center">
+                      <FaCarAlt className="mr-1 mb-[0.1rem]" /> {vehiculo.tipo}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-start flex flex-col gap-5 text-white">
+                  <p
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="800"
+                  >
+                    <b>Conectividad: </b>
+                    {vehiculo.conectividad}
                   </p>
-                  <p className="flex justify-center items-center">
-                    <FaCarAlt className="mr-1 mb-[0.1rem]" /> {vehiculo.tipo}
+                  <p
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="900"
+                  >
+                    <b>Diseño: </b>
+                    {vehiculo.diseño}
+                  </p>
+                  <p
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="1000"
+                  >
+                    <b>Asistencia: </b>
+                    {vehiculo.asistencia}
+                  </p>
+                  <p
+                    data-aos="fade"
+                    data-aos-duration="1700"
+                    data-aos-delay="1100"
+                  >
+                    <b>Practicidad: </b>
+                    {vehiculo.practicidad}
                   </p>
                 </div>
               </div>
-
-              <div className="text-start flex flex-col gap-5 text-white">
-                <p
-                  data-aos="fade"
-                  data-aos-duration="1700"
-                  data-aos-delay="800"
-                >
-                  <b>Conectividad: </b>
-                  {vehiculo.conectividad}
-                </p>
-                <p
-                  data-aos="fade"
-                  data-aos-duration="1700"
-                  data-aos-delay="900"
-                >
-                  <b>Diseño: </b>
-                  {vehiculo.diseño}
-                </p>
-                <p
-                  data-aos="fade"
-                  data-aos-duration="1700"
-                  data-aos-delay="1000"
-                >
-                  <b>Asistencia: </b>
-                  {vehiculo.asistencia}
-                </p>
-                <p
-                  data-aos="fade"
-                  data-aos-duration="1700"
-                  data-aos-delay="1100"
-                >
-                  <b>Practicidad: </b>
-                  {vehiculo.practicidad}
-                </p>
-              </div>
+              <a
+                href="https://web.whatsapp.com/"
+                target="e_blank"
+                className="z-20 py-[5px] xl:ml-8 md:ml-8 w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300 cursor-pointer"
+                data-aos="fade"
+                data-aos-duration="1700"
+                data-aos-delay="1200"
+              >
+                <FaWhatsapp className="mr-2 scale-125" />
+                Consultar
+              </a>
             </div>
-            <a
-              href="https://web.whatsapp.com/"
-              target="e_blank"
-              className="z-20 py-[5px] xl:ml-8 md:ml-8 w-32 flex items-center justify-center rounded-2xl backdrop-blur-lg shadow-lg font-semibold bg-azul-image hover:scale-105 transform duration-300 cursor-pointer"
-              data-aos="fade"
-              data-aos-duration="1700"
-              data-aos-delay="1200"
-            >
-              <FaWhatsapp className="mr-2 scale-125" />
-              Consultar
-            </a>
           </div>
         </div>
       </div>

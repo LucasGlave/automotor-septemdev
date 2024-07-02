@@ -9,6 +9,7 @@ import mobileBackground from "../assets/fondo-2.jpg"
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PreguntasFrecuentes from "./PreguntasFrecuentas/PreguntasFrecuentes";
 
 type InicioProps = {
   id: string;
@@ -44,7 +45,7 @@ function Inicio({ id }: InicioProps) {
       <img
         src={imageBackground}
         alt="fondo"
-        className="xl:fixed xl:flex w-screen h-screen object-cover z-0 hidden"
+        className="xl:fixed xl:flex w-screen min-h-screen object-cover z-0 hidden"
       />
       <img
         src={mobileBackground}
@@ -66,6 +67,7 @@ function Inicio({ id }: InicioProps) {
       
       <Usados id="VEHICULOS" />
       <Reseñas id="RESEÑAS" />
+      <PreguntasFrecuentes />
       <Nosotros id="NOSOTROS" />
       <Contacto id="CONTACTO" />
     </div>
